@@ -1,0 +1,94 @@
+/* ===============================
+   Base Reset & Global Styles
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  color: var(--color-text-main);
+  background: var(--color-secondary-1);
+  line-height: 1.6;
+  transition: background var(--transition-main), color var(--transition-main);
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+img,
+video,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+::selection {
+  color: var(--color-text-inverse);
+  background: var(--color-primary);
+}
+
+/* Arabic language support */
+html[lang='ar'] body {
+  font-family: var(--font-arabic);
+}
+
+html[dir='rtl'] body {
+  text-align: right;
+}
+
+html[dir='rtl'] .navbar,
+html[dir='rtl'] .nav-menu,
+html[dir='rtl'] .hero__actions,
+html[dir='rtl'] .package-toggle,
+html[dir='rtl'] .branch-tabs,
+html[dir='rtl'] .site-footer__content {
+  direction: rtl;
+}
+
+html[dir='rtl'] .hero__content,
+html[dir='rtl'] .section-heading,
+html[dir='rtl'] .split-block__content,
+html[dir='rtl'] .form-layout__content,
+html[dir='rtl'] .branch-map__info {
+  text-align: right;
+}
+
+html[dir='rtl'] .section-heading--center {
+  text-align: center;
+}
